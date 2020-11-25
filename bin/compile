@@ -17,13 +17,8 @@ cd $VENDOR_DIR
 mkdir -p ffmpeg
 cd ffmpeg
 curl -L --silent $DOWNLOAD_URL | tar xJ --strip-components=1
+cp ffmpeg ffmpeg2
 
-cd $BUILD_DIR
-mkdir -p $VENDOR_DIR
-cd $VENDOR_DIR
-mkdir -p ffmpeg2
-cd ffmpeg2
-curl -L --silent $DOWNLOAD_URL | tar xJ --strip-components=1
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
